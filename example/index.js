@@ -8,7 +8,6 @@ import {
 	RELATIVE_DEPTH,
 	IS_LEAF,
 	RANDOM_COLOR,
-	RANDOM_NODE_COLOR,
 } from '../src/index.js';
 import {
 	Scene,
@@ -52,7 +51,6 @@ let params = {
 
 	'enableUpdate': true,
 	'raycast': NONE,
-	'optimizeRaycast': true,
 	'enableCacheDisplay': false,
 	'enableRendererStats': false,
 	'orthographic': false,
@@ -182,9 +180,9 @@ function init() {
 	controls.maxDistance = 2000;
 
 	// lights
-	const dirLight = new DirectionalLight( 0xffffff );
-	dirLight.position.set( 1, 2, 3 );
-	scene.add( dirLight );
+	// const dirLight = new DirectionalLight( 0xffffff );
+	// dirLight.position.set( 1, 2, 3 );
+	// scene.add( dirLight );
 
 	const ambLight = new AmbientLight( 0xffffff, 0.2 );
 	scene.add( ambLight );
@@ -252,7 +250,6 @@ function init() {
 		RELATIVE_DEPTH,
 		IS_LEAF,
 		RANDOM_COLOR,
-		RANDOM_NODE_COLOR,
 
 	} );
 	debug.open();
@@ -276,7 +273,6 @@ function init() {
 
 	} );
 	exampleOptions.add( params, 'raycast', { NONE, ALL_HITS, FIRST_HIT_ONLY } );
-	exampleOptions.add( params, 'optimizeRaycast', );
 	exampleOptions.add( params, 'enableCacheDisplay' );
 	exampleOptions.add( params, 'enableRendererStats' );
 	exampleOptions.open();
@@ -446,7 +442,6 @@ function animate() {
 	tiles.errorTarget = params.errorTarget;
 	tiles.errorThreshold = params.errorThreshold;
 	tiles.loadSiblings = params.loadSiblings;
-	tiles.optimizeRaycast = params.optimizeRaycast;
 	tiles.stopAtEmptyTiles = params.stopAtEmptyTiles;
 	tiles.displayActiveTiles = params.displayActiveTiles;
 	tiles.maxDepth = params.maxDepth;
