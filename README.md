@@ -31,7 +31,11 @@ If a tile set or geometry does not load or render properly please make an issue!
 ```
 npm install 3d-tiles-renderer --save
 ```
+## Build
 
+```
+npm run build
+```
 ## Basic TilesRenderer
 
 Setting up a basic application with a 3D Tile Set.
